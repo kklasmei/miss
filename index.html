@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Missing</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="fullPage.js-master/favicon.png">
+
+	<link rel="stylesheet" type="text/css" href="fullPage.js-master/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="fullPage.js-master/examples/examples.css" />
+
+
+	<style>
+		/* Sections
+		 * --------------------------------------- */
+		#section0 img,
+		#section1 img{
+			margin: 20px 0 0 0;
+		}
+		#section2 img{
+			margin: 20px 0 0 52px;
+		}
+		#section3 img{
+			bottom: 0px;
+			position: absolute;
+			margin-left: -420px;
+		}
+		.intro p{
+			width: 50%;
+			margin: 0 auto;
+			font-size: 12px;
+		}
+
+	</style>
+
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="fullPage.js-master/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="fullPage.js-master/examples/examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#fad413', '#380036', '#fad413', '#e5e5e5'],
+				anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+				menu: '#menu',
+				scrollingSpeed: 1000
+			});
+			
+			$( ".states , .age , .education" ).change(function() {
+			  $.fn.fullpage.moveSlideRight();
+			});
+			
+			
+			document.getElementById("states").onchange=function() {
+    		var select = this.value;
+    		document.getElementById("ages").onchange=function() {
+    		var select = this.value;
+    		document.getElementById("schools").onchange=function() {
+    		var select = this.value;
+    		
+			var average = "$"+ Math.round((parseInt($("#states").val()) + parseInt($("#ages").val()) + parseInt($("#schools").val())) / 3);
+
+
+			$( '.education' ).change(function( event ) {
+			  return average;
+			});
+			$( '.education' ).change(function( event ) {
+			  $( ".average" ).html( event.result );
+			});
+		
+		}}}});
+		
+
+		
+	</script>
+
+</head>
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="firstPage"><a href="#firstPage"></a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage"></a></li>
+	<li data-menuanchor="thirdPage"><a href="#thirdPage"></a></li>
+	<li data-menuanchor="fourthPage"><a href="#fourthPage"></a></li>
+</ul>
+
+
+<div id="fullpage">
+	<div class="section" id="section0">
+		<h1>MISSING</h1>
+		<p>On average, women lose $434,000 in income over a lifetime due to the career wage gap in the United States.</p>
+	</div>
+
+	<div class="section" id="section1">
+		<div class="slide">
+			<div class="intro">
+				<h2>Income</h2>
+				<p2>Determine loss of income</p2>
+			</div>
+		</div>
+	<div class="slide">
+		<div class="intro">
+			<h2>State</h2>
+			<br>
+	<div class= "states">      
+    <div class= "choose">
+    	<form name="form1">
+        <select id="states" onChange="this.form.submit()">
+    	<option value="434000">Choose</option>
+    	<option value="445000">Alabama</option>
+    	<option value="565000">Alaska</option>
+    	<option value="366000">Arizona</option>
+    	<option value="412000">Arkansas</option>
+    	<option value="288000">California</option>
+    	<option value="429000">Colorado</option>
+    	<option value="508000">Connecticut</option>
+    	<option value="361000">Delaware</option>
+    	<option value="317000">District of Columbia</option>
+    	<option value="335000">Florida</option>
+    	<option value="406000">Georgia</option>
+    	<option value="453000">Hawaii</option>
+    	<option value="464000">Idaho</option>
+    	<option value="538000">Illinois</option>
+    	<option value="552000">Indiana</option>
+    	<option value="424000">Iowa</option>
+    	<option value="485000">Kansas</option>
+    	<option value="420000">Kentucky</option>
+    	<option value="592000">Louisiana</option>
+    	<option value="400000">Maine</option>
+    	<option value="469000">Maryland</option>
+    	<option value="484000">Massachusetts</option>
+    	<option value="546000">Michigan</option>
+    	<option value="400000">Minnesota</option>
+    	<option value="397000">Mississippi</option>
+    	<option value="466000">Missouri</option>
+    	<option value="434000">Montana</option>
+    	<option value="305000">Nebraska</option>
+    	<option value="416000">Nevada</option>
+    	<option value="577000">New Hampshire</option>
+    	<option value="449000">New Jersey</option>
+    	<option value="358000">New Mexico</option>
+    	<option value="330000">New York</option>
+    	<option value="333000">North Carolina</option>
+    	<option value="438000">North Dakota</option>
+    	<option value="486000">Ohio</option>
+    	<option value="387000">Oklahoma</option>
+    	<option value="370000">Oregon</option>
+    	<option value="463000">Pennsylvania</option>
+    	<option value="379000">Rhode Island</option>
+    	<option value="420000">South Carolina</option>
+    	<option value="389000">South Dakota</option>
+    	<option value="366000">Tennessee</option>
+    	<option value="347000">Texas</option>
+    	<option value="542000">Utah</option>
+    	<option value="270000">Vermont</option>
+    	<option value="510000">Virginia</option>
+    	<option value="477000">Washington</option>
+    	<option value="561000">West Virginia</option>
+    	<option value="516000">Wisconsin</option>
+    	<option value="728000">Wyoming</option>
+    </select>
+    </form>
+    </div>			</div>
+		</div>
+		</div>
+	<div class="slide">
+			<div class="intro">
+				<h2>Age</h2>
+				<br>
+		<div class= "age">      
+    	<div class= "year">
+        <select id="ages" onChange="this.form.submit()">
+        <option value="434000">Choose</option>
+    	<option value="269190">25-34</option>
+    	<option value="503230">35-44</option>
+    	<option value="564710">45-54</option>
+    	<option value="468440">55-64</option>
+    	</select></div>			</div>
+    	</div>
+     <div class="slide">
+			<div class="intro">
+				<h2>Education</h2>
+				<br>
+		<div class= "school">      
+    	<div class= "education">
+        <select id="schools" onChange="this.form.submit()">
+        <option value="434000">Choose</option>
+    	<option value="270000">Less than High School</option>
+    	<option value="392000">High School</option>
+    	<option value="452000">Some College</option>
+    	<option value="713000">Bachelor's Degree or Higher</option>
+    	</select></div>			</div>
+    	</div>
+		</div>
+	    <div class="slide">
+			<div class="intro">
+				<h3 class="average">Average</h3>
+				<br>
+				<p2>You or your female counterparts can plan on losing this amount of income, on average, during your career.</p2>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="section" id="section2">
+		<div class="slide">
+			<div class="intro">
+			<h1>Take Action</h1>
+			<p3>Suggested Voting   & Negotiation Tips</p3>
+		</div>
+		</div>
+		<div class="slide">
+			<div class="intro">
+			<h4>Voting</h4> <br> <br>
+			<p3>Vote for local, state, and national candidates that value equal pay, including <br> Congress members who would vote in favor of the Paycheck Fairness Act. The following <br> Presidential Candidates for 2016 plan to further close the wage gap: </p3>
+			<br>
+			<br>
+			<p4>HILLARY CLINTON (D)</p4>
+			<br>
+			<p4>MARTIN O'MALLEY (D)</p4>
+			<br>
+			<p4>BERNIE SANDERS (D)</p4>
+			<br>
+			<br>
+			<p3>Many of the other candidates agree that current legislation is sufficient. <br> No other candidates have proposed plans in their campaigns to close the gap.</p3>
+			<br>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="intro">
+			<h4>Tips</h4> <br> <br>
+			<p7>TRANSPARENCY:  There’s a strong argument to be made for transparency not just for women, but for minorities and other <br> disadvantaged groups. African-American men earn less than white men, for example, though a Harvard Business Review <br> analysis found that controlling for education, black men out-earn both white and black women. Evidence also suggests <br> that less secrecy about pay results in greater employee loyalty and lower turnover.</p7> <br> <br>
+			<p7>SALARY MARKET:  For yourself and for people on your team (both women and men), you want to make sure your salaries are <br> marked to market. If there are people who have been in the company for years, their compensation may have fallen behind. <br> Many people don’t even think to negotiate for more in the jobs they already have. Be the proactive one, get current salary data, <br> and if it supports higher compensation, share it with management. You may just help, not only yourself, but your colleagues get a raise.</p7> <br> <br>
+			<p7>NEGOTIATION:  If you are comfortable with negotiating, help others do the same. Let your colleagues know how you find salary <br> information. Encourage your colleagues to prepare for their performance reviews and to ask for more. Share articles on negotiating. <br>  If you know of a colleague preparing for a raise request, role play with them and give them some live practice with the negotiation.</p7> <br>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="intro">
+			<h4>Act</h4> <br> <br>
+			<p3>Visit the website of the Equal Employment Opportunity Commission <a id="action" href="http://www.eeoc.gov/">(EEOC)</a>. The EEOC enforces the Equal Pay Act and <br> Title VII of the Civil Rights Act of 1964. You can learn about your rights and find out how and when to file a charge of discrimination <br> with the EEOC. For federal sector employment, you also can refer to your agency’s federal sector complaint procedures.</p3>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section" id="section3">
+		<div class="intro">
+			<h1>Sources</h1>
+		 <p3>"Lifetime Losses"  Center for American Progress Action Fund, 2008</p3>
+		 <br>
+		 <br>
+	<a href="Lifetime_Losses_Report.pdf" download="Lifetime_Losses_Report.pdf">DOWNLOAD FULL REPORT HERE</a>	
+		<br>
+		<br>
+		<br>
+		<p3>"Let’s Expose the Gender Pay Gap" Joanne Lipman: New York Times, 2015</p3>
+		<br> <br>
+		<p3>"The Gender Wage Gap Exists" Caroline Ceniza-Levine: Forbes.com, 2015</p3>
+		<br> <br>
+		<p3>"Your Right to Equal Pay" whitehouse.gov, 2015</p3> <br> <br> <br> <br> <br> <br>
+		<p>Website by Katie Klasmeier</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
